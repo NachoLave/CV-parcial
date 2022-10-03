@@ -1,0 +1,404 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.flex{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+video{
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
+}
+label{
+    display: none;
+    
+}
+input{
+    display: none;
+}
+.final-pagina{
+    width: 100%;
+    justify-content: center;
+    
+}
+
+.texto-final{
+    text-align: center;
+    justify-content: center;
+}
+/*---------------------------------contenedor izquierdo-------------------------------------------------------------*/
+.contendor-izquierda{
+    width: 25%;
+    height: 60.9375rem;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    position: absolute;
+    
+}
+.fondo-enlaces{
+    background-color:whitesmoke ;
+    border-right: solid black 1px;
+    opacity: 0.85;
+}
+
+.contenedor-nombre{
+    opacity: 1;
+    height: 50%;
+    position: relative;
+    bottom: -9.375rem;
+    font-size: 1.5rem;
+}
+.imagen-borde-nom-arriba{
+    width: 15%;
+    position: relative;
+    right: 1.125rem;
+    top: 1.875rem;
+}
+.imagen-borde-nom-abajo{
+    width: 15%;
+    position: relative;
+    right: -15.625rem;
+    top: -1.25rem;
+}
+
+.contenedor-enlaces{
+    height: 50%;
+    position: relative;
+    top: -12.5rem;
+    
+}
+
+.enlace{
+    font-size: 1.25rem;
+    text-decoration: black solid;
+    margin: 1.5625rem;
+    color: black;
+}
+.estudios{
+    color: #FF4237;
+}
+
+.contenedor-enlace{
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid black ;
+    
+}
+.imagen-cont-izq{
+    width: 2.8125rem;
+    height: 2.8125rem;
+    position: relative;
+    bottom: -1.875rem;
+    right: -0.625rem;
+}
+.cont-izq-descripcion{
+    position: relative;
+    position: relative;
+    bottom: -1.25rem;
+    right: -0.9375rem;
+}
+.sacar-linea-enlace{
+    text-decoration: none;
+}
+
+/*---------------------------------contenedor medio-------------------------------------------------------------*/
+
+.contenedor-cuadrados-estudios{
+    color: black;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 556.155px 556.165px ;
+    grid-template-rows: 170px 170px;
+    position: relative;
+    left: 39rem;
+    top: 15rem;
+}
+.contenedor-estudios{
+    text-decoration: none;
+    border: #000000 solid 3px;
+    border-radius: 5px;
+    
+}
+.izquierda{
+    border-right:#FF4237 solid 3px;
+}
+.derecha{
+    border-left: #FF4237 solid 3px;
+}
+.titulo-cdu{
+    font-size: 1.5rem;
+    position: relative;
+    top: 2.5rem;
+    margin-left: 1rem;
+}
+.subtitulo-cdu{
+    font-size: 1.2rem;
+    position: relative;
+    top: 2rem;
+    margin-left: 1rem;
+}
+.titulo-estudios{
+    text-align: center;
+    width: 30%;
+    position: relative;
+    border-bottom: #000000 double 10px;
+    left: 40rem;
+    top: 10rem;
+    font-size: 2.5em;
+}
+.estudios-tit{
+    font-family: 'Roboto', sans-serif;
+}
+
+/*-----------------------------------------------------------------------------------*/
+@media all and (max-width: 700px) and (min-width: 100px){  /*cuando el dispositivo es como máximo de 700px*/
+
+    input:checked  ~ .contenedor-enlace{   /*muestra todas el contenido de todas las etiquetas ul */
+        display:block;
+        
+        
+    }
+    input:checked ~ label {   /*muestra todo el contenido de todas las etiquetas label */
+        background: whitesmoke; 
+        
+    }
+    label:hover{                /*cambia el color de ☰ */
+        background: grey;
+        
+    }
+    a{                         /*elimina el margen  de cada botón */
+        margin: 0px;
+        
+    }
+
+     label {                      /* dibuja la etiqueta ☰  con formato botón */
+        box-sizing: border-box;
+        display: block;
+        border: 1px solid black;
+        border-radius: 5px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-weight: bold;
+        text-align: center;
+        user-select: none;
+        background-color: cadetblue;
+    }
+    .contenedor-enlace{       /*deja de mostrar el bloque contenedor de los botones horizontales */
+        display: none;
+    }
+    .imagen-borde-nom-arriba, .imagen-borde-nom-abajo, .imagen-cont-izq{
+        display: none;
+    }
+    .contendor-izquierda{
+        width: 25%;
+        
+    }
+    .contenedor-nombre{
+        font-size: 1rem;
+    }
+    .enlace{
+        font-size: 1rem;
+    }
+    .imagen-borde-nom-arriba, .imagen-borde-nom-abajo {
+        display: none;
+    }
+    .contenedor-cuadrados-estudios{
+        position: relative;
+        left: 10.6rem;
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .titulo-estudios{
+        position: relative;
+        left: 14rem;
+        font-size: 1.5rem;
+    }
+    .titulo-cdu{
+        position: relative;
+        top:0.5rem;
+    }
+    .subtitulo-cdu{
+        position: relative;
+        top: -0.5rem;
+    }
+    .izquierda{
+        border-left: #FF4237 solid 3px;
+        border-right:#FF4237 solid 3px;
+    }
+    .derecha{
+        border-left: #FF4237 solid 3px;
+        border-right:#FF4237 solid 3px;
+    }
+
+}
+@media screen and (min-width:700px) and (max-width:1100px){
+    
+    .contenedor-nombre{
+        font-size: 1rem;
+    }
+    .enlace{
+        font-size: 1rem;
+    }
+    .imagen-borde-nom-arriba, .imagen-borde-nom-abajo {
+        display: none;
+    }
+    .contenedor-cuadrados-estudios{
+        position: relative;
+        left: 17.5rem;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 356.155px 356.165px ;
+        grid-template-rows: 190px 190px;
+    }
+    .titulo-estudios{
+        position: relative;
+        left: 18rem;
+    }
+}
+@media screen and (min-width:1100px) and (max-width:1200px){
+    .contenedor-nombre{
+        font-size: 1.4rem;
+    }
+    .imagen-borde-nom-arriba{
+        width: 15%;
+    }
+    .imagen-borde-nom-abajo{
+        width: 15%;
+        position: relative;
+        left: 14.5rem;
+    }
+    .enlace{
+        font-size: 1rem;
+    }
+    .contenedor-cuadrados-estudios{
+        position: relative;
+        left: 20rem;
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 456.155px 456.165px ;
+        grid-template-rows: 170px 170px;
+    }
+    .titulo-estudios{
+        position: relative;
+        left: 23rem;
+    }
+}
+@media screen and (min-width:1200px) and (max-width:1300px){
+    .contenedor-cuadrados-estudios{
+        position: relative;
+        left: 20rem;
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 456.155px 456.165px ;
+        grid-template-rows: 170px 170px;
+    }
+    .titulo-estudios{
+        position: relative;
+        left: 23rem;
+    }
+}
+@media screen and (min-width:1300px) and (max-width:1400px){
+    .contenedor-cuadrados-estudios{
+        position: relative;
+        left: 22rem;
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 456.155px 456.165px ;
+        grid-template-rows: 170px 170px;
+    }
+    .titulo-estudios{
+        position: relative;
+        left: 25rem;
+    }
+}
+@media screen and (min-width:1400px) and (max-width:1500px){
+    .contenedor-cuadrados-estudios{
+        position: relative;
+        left: 27rem;
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 456.155px 456.165px ;
+        grid-template-rows: 170px 170px;
+    }
+    .titulo-estudios{
+        position: relative;
+        left: 30rem;
+    }
+}
+@media screen and (min-width:1500px) and (max-width:1600px){
+    .contenedor-cuadrados-estudios{
+        position: relative;
+        left: 32rem;
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 456.155px 456.165px ;
+        grid-template-rows: 170px 170px;
+    }
+    .titulo-estudios{
+        position: relative;
+        left: 35rem;
+    }
+}
+@media screen and (min-width:1600px) and (max-width:1700px){
+    .contenedor-cuadrados-estudios{
+        position: relative;
+        left: 32rem;
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 456.155px 456.165px ;
+        grid-template-rows: 170px 170px;
+    }
+    .titulo-estudios{
+        position: relative;
+        left: 35rem;
+    }
+}
+@media screen and (min-width:1700px) and (max-width:1800px){
+    .contenedor-cuadrados-estudios{
+        position: relative;
+        left: 32rem;
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 456.155px 456.165px ;
+        grid-template-rows: 170px 170px;
+    }
+    .titulo-estudios{
+        position: relative;
+        left: 35rem;
+    }
+}
+@media screen and (min-width:1800px) and (max-width:1900px){
+    .contenedor-cuadrados-estudios{
+        position: relative;
+        left: 35rem;
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 456.155px 456.165px ;
+        grid-template-rows: 170px 170px;
+    }
+}
+@media screen and (min-width:1900px) {
+    .contenedor-cuadrados-estudios{
+        position: relative;
+        left: 35rem;
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 456.155px 456.165px ;
+        grid-template-rows: 170px 170px;
+    }
+    
+}

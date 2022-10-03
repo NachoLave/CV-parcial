@@ -1,0 +1,690 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.flex{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+video{
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
+}
+label{
+    display: none;
+    
+}
+input{
+    display: none;
+}
+.final-pagina{
+    width: 100%;
+    justify-content: center;
+}
+.texto-final{
+    text-align: center;
+    justify-content: center;
+}
+/*---------------------------------contenedor izquierdo-------------------------------------------------------------*/
+.contendor-izquierda{
+    width: 25%;
+    height: 60.59rem;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    position: absolute;
+    
+    
+}
+.fondo-enlaces{
+    background-color:whitesmoke ;
+    border-right: solid black 1px;
+    opacity: 0.85;
+}
+
+.contenedor-nombre{
+    opacity: 1;
+    height: 50%;
+    position: relative;
+    bottom: -9.375rem;
+    font-size: 1.5rem;
+}
+.imagen-borde-nom-arriba{
+    width: 15%;
+    position: relative;
+    right: 1.125rem;
+    top: 1.875rem;
+}
+.imagen-borde-nom-abajo{
+    width: 15%;
+    position: relative;
+    right: -15.625rem;
+    top: -1.25rem;
+}
+
+.contenedor-enlaces{
+    height: 50%;
+    position: relative;
+    top: -12.5rem;
+    justify-content: left;
+    margin-top:0;
+    padding: 0;
+}
+
+.enlace{
+    font-size: 1.25rem;
+    text-decoration: black solid;
+    margin: 1.5625rem;
+    color: black;
+}
+.home{
+    color: #FF4237;
+}
+
+.contenedor-enlace{
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid black ;
+    
+}
+.imagen-cont-izq{
+    width: 2.8125rem;
+    height: 2.8125rem;
+    position: relative;
+    bottom: -1.875rem;
+    right: -0.625rem;
+}
+.cont-izq-descripcion{
+    position: relative;
+    position: relative;
+    bottom: -1.25rem;
+    right: -0.9375rem;
+}
+.sacar-linea-enlace{
+    text-decoration: none;
+}
+
+/*---------------------------------contenedor medio-------------------------------------------------------------*/
+
+.contenedor-datos{
+    width: 50%;
+    height: 60.9375rem;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    position: relative;
+    left: 20rem;
+}
+
+.cont-palabras1{
+    font-size: 2rem;
+    position: relative;
+    top: -7.5rem;
+    left: -4.0625rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.nombre-descrip{
+    color: #FF4237;
+    position: relative;
+    left: 0.625rem;
+    font-family: 'Dancing Script', cursive;
+}
+.cont-palabras2{
+    font-size: 2rem;
+    position: relative;
+    top: -7.5rem;
+    left: -12rem;
+}
+.cont-palabras3{
+    font-size: 1.4375rem;
+    position: relative;
+    top: -5.625rem;
+    left: -1.25rem;
+    width: 70%;
+    font-family: 'Quicksand', sans-serif;
+}
+/*---------------------------------contenedor derecho-------------------------------------------------------------*/
+
+.contenedor-foto-estatica{
+    width: 25%;
+    height: 60.9375rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background-color: whitesmoke;*/
+    position: relative;
+    left: 24rem;
+}
+.contenedor-imagen{
+    width: 100%;
+    height: 50%;
+    position: relative;
+    top: -4.0625rem;
+    left: -1.875rem;
+    
+
+}
+.imagen-derecha{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border: solid black 5px;
+    right: 1.5625rem;
+    top: -4.375rem;
+}
+.imagen-borde-abajo{
+    position: relative;
+    top: -4rem;
+    right: -25rem;
+
+}
+
+.imagen-borde-arriba{
+    position: relative;
+    top: -3.75rem;
+    right: 4.375rem;
+
+}
+
+
+
+
+
+/*-----------------------------------------------------------------------------------*/
+
+@media all and (max-width: 500px) and (min-width: 100px){  /*cuando el dispositivo es como máximo de 700px*/
+
+    input:checked  ~ .contenedor-enlace{   /*muestra todas el contenido de todas las etiquetas ul */
+        display:block;
+        
+        
+    }
+    input:checked ~ label {   /*muestra todo el contenido de todas las etiquetas label */
+        background: whitesmoke; 
+        
+    }
+    label:hover{                /*cambia el color de ☰ */
+        background: grey;
+        
+    }
+    a{                         /*elimina el margen  de cada botón */
+        margin: 0px;
+        
+    }
+
+     label {                      /* dibuja la etiqueta ☰  con formato botón */
+        box-sizing: border-box;
+        display: block;
+        border: 1px solid black;
+        border-radius: 5px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-weight: bold;
+        text-align: center;
+        user-select: none;
+        background-color: cadetblue;
+        
+        
+    }
+
+    .contenedor-enlace{       /*deja de mostrar el bloque contenedor de los botones horizontales */
+        display: none;
+    }
+
+
+
+
+
+    .contenedor-foto-estatica , .imagen-borde-nom-arriba, .imagen-borde-nom-abajo, .imagen-cont-izq {
+        display: none;
+    }
+    
+    .contendor-izquierda{
+        width: 30%;
+        
+        
+    }
+    .nombre{
+        font-size: 1rem;
+    }
+    .contenedor-datos{
+        width: 75%;
+        
+    }
+    .cont-palabras1{
+        width: 70%;
+        position: relative;
+        left: -10rem;
+    }
+    .cont-palabras2{
+        width: 70%;
+        position: relative;
+        left: -10rem;
+        
+    }
+    .cont-palabras3{
+        width: 90%;
+        position: relative;
+        left: -8rem;
+        
+    }
+    .fondo-enlace{
+        border-bottom: solid whitesmoke;
+    }
+
+}
+
+
+
+
+
+@media all and (max-width: 700px) and (min-width: 500px){  /*cuando el dispositivo es como máximo de 700px*/
+
+    input:checked  ~ .contenedor-enlace{   /*muestra todas el contenido de todas las etiquetas ul */
+        display:block;
+        
+        
+    }
+    input:checked ~ label {   /*muestra todo el contenido de todas las etiquetas label */
+        background: whitesmoke; 
+        
+    }
+    label:hover{                /*cambia el color de ☰ */
+        background: grey;
+        
+    }
+    a{                         /*elimina el margen  de cada botón */
+        margin: 0px;
+        
+    }
+
+     label {                      /* dibuja la etiqueta ☰  con formato botón */
+        box-sizing: border-box;
+        display: block;
+        border: 1px solid black;
+        border-radius: 5px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-weight: bold;
+        text-align: center;
+        user-select: none;
+        background-color: cadetblue;
+        
+        
+    }
+
+    .contenedor-enlace{       /*deja de mostrar el bloque contenedor de los botones horizontales */
+        display: none;
+    }
+
+
+
+
+
+    .contenedor-foto-estatica , .imagen-borde-nom-arriba, .imagen-borde-nom-abajo, .imagen-cont-izq {
+        display: none;
+    }
+    
+    .contendor-izquierda{
+        width: 30%;
+        
+        
+    }
+    .contenedor-datos{
+        width: 75%;
+        
+    }
+    .cont-palabras1{
+        width: 70%;
+        position: relative;
+        left: -10rem;
+    }
+    .cont-palabras2{
+        width: 70%;
+        position: relative;
+        left: -10rem;
+        
+    }
+    .cont-palabras3{
+        width: 90%;
+        position: relative;
+        left: -8rem;
+        
+    }
+    .fondo-enlace{
+        border-bottom: solid whitesmoke;
+    }
+}
+
+
+@media screen and (min-width:700px)  and (max-width:1100px){
+    .contenedor-nombre{
+        font-size: 1rem;
+    }
+    .contenedor-foto-estatica{
+        position: relative;
+        left: -1rem;
+    }
+    .enlace{
+        font-size: 1rem;
+    }
+    .cont-palabras1{
+        font-size: 1.7rem;
+        position: relative;
+        left: -8rem;
+    }
+    .cont-palabras2{
+        font-size: 1.7rem;
+        position: relative;
+        left: -9.9rem;
+    }
+    .cont-palabras3{
+        font-size: 1.4375rem;
+        position: relative;
+        top: -5.625rem;
+        left: -6rem;
+        width: 80%;
+        font-family: 'Quicksand', sans-serif;
+    }
+    .imagen-borde-nom-arriba, .imagen-borde-nom-abajo, .imagen-borde-abajo, .imagen-borde-arriba {
+        display: none;
+    }
+    .contenedor-foto-estatica{
+        position: relative;
+        left: 19rem;
+    }
+}
+
+
+@media screen and (min-width:1100px)  and (max-width:1200px){
+    .contenedor-nombre{
+        font-size: 1.4rem;
+    }
+    .imagen-borde-nom-arriba{
+        width: 15%;
+    }
+    .imagen-borde-nom-abajo{
+        width: 15%;
+        position: relative;
+        left: 14.5rem;
+    }
+    .imagen-cont-izq {
+        width: 2rem;
+        height: 2rem;
+    }
+    .enlace{
+        font-size: 1rem;
+    }
+    
+    .cont-palabras1{
+        font-size: 1.7rem;
+        position: relative;
+        left: -8rem;
+    }
+    .cont-palabras2{
+        font-size: 1.7rem;
+        position: relative;
+        left: -9.9rem;
+    }
+    .cont-palabras3{
+        font-size: 1.4375rem;
+        position: relative;
+        top: -5.625rem;
+        left: -3rem;
+        width: 90%;
+        font-family: 'Quicksand', sans-serif;
+    }
+    .imagen-borde-abajo{
+        position: relative;
+        left: 13rem;
+    }
+    .contenedor-foto-estatica{
+        position: relative;
+        left: 19rem;
+    }
+}
+
+
+
+@media screen and (min-width:1200px)and (max-width:1300px) {
+    .cont-palabras1{
+        font-size: 1.7rem;
+        position: relative;
+        left: -8rem;
+    }
+    .cont-palabras2{
+        font-size: 1.7rem;
+        position: relative;
+        left: -9.9rem;
+    }
+    .cont-palabras3{
+        font-size: 1.4375rem;
+        position: relative;
+        top: -5.625rem;
+        left: -5rem;
+        font-family: 'Quicksand', sans-serif;
+    }
+    .imagen-borde-abajo{
+        position: relative;
+        left: 17rem;
+    }
+    .contenedor-foto-estatica{
+        position: relative;
+        left: 19rem;
+    }
+}
+
+
+@media screen and (min-width:1300px) and (max-width:1400px){
+    .cont-palabras1{
+        font-size: 1.7rem;
+        position: relative;
+        left: -8rem;
+    }
+    .cont-palabras2{
+        font-size: 1.7rem;
+        position: relative;
+        left: -9.9rem;
+    }
+    .cont-palabras3{
+        font-size: 1.4375rem;
+        position: relative;
+        top: -5.625rem;
+        left: -4rem;
+        font-family: 'Quicksand', sans-serif;
+    }
+    .imagen-borde-abajo{
+        position: relative;
+        left: 17rem;
+    }
+    .contenedor-foto-estatica{
+        position: relative;
+        left: 19rem;
+    }
+}
+
+
+@media screen and (min-width:1400px) and (max-width:1500px){
+    .cont-palabras1{
+        font-size: 1.7rem;
+        position: relative;
+        left: -8rem;
+    }
+    .cont-palabras2{
+        font-size: 1.7rem;
+        position: relative;
+        left: -10rem;
+    }
+    .cont-palabras3{
+        font-size: 1.4375rem;
+        position: relative;
+        top: -5.625rem;
+        left: -3rem;
+        font-family: 'Quicksand', sans-serif;
+    }
+    .imagen-borde-abajo{
+        position: relative;
+        left: 20rem;
+    }
+    .contenedor-foto-estatica{
+        position: relative;
+        left: 19rem;
+    }
+}
+@media screen and (min-width:1500px) and (max-width:1600px){
+    .cont-palabras1{
+        font-size: 1.7rem;
+        position: relative;
+        left: -8rem;
+    }
+    .cont-palabras2{
+        font-size: 1.7rem;
+        position: relative;
+        left: -10rem;
+    }
+    .cont-palabras3{
+        font-size: 1.4375rem;
+        position: relative;
+        top: -5.625rem;
+        left: -1rem;
+        font-family: 'Quicksand', sans-serif;
+    }
+    .imagen-borde-abajo{
+        position: relative;
+        left: 20rem;
+    }
+    .contenedor-foto-estatica{
+        position: relative;
+        left: 19rem;
+    }
+}
+
+@media screen and (min-width:1600px) and (max-width:1700px){
+    .cont-palabras1{
+        font-size: 1.7rem;
+        position: relative;
+        left: -8rem;
+    }
+    .cont-palabras2{
+        font-size: 1.7rem;
+        position: relative;
+        left: -10rem;
+    }
+    .cont-palabras3{
+        font-size: 1.4375rem;
+        position: relative;
+        top: -5.625rem;
+        left: -1rem;
+        font-family: 'Quicksand', sans-serif;
+    }
+    .imagen-borde-abajo{
+        position: relative;
+        left: 22rem;
+    }
+    .contenedor-foto-estatica{
+        position: relative;
+        left: 22rem;
+    }
+}
+
+
+
+@media screen and (min-width:1700px) and (max-width:1800px){
+    .cont-palabras1{
+        font-size: 2rem;
+        position: relative;
+        left: -100px;
+    }
+    .cont-palabras2{
+        font-size: 2rem;
+        position: relative;
+        left: -145px;
+    }
+    .cont-palabras3{
+        font-size: 1.6rem;
+        position: relative;
+        top: -5.625rem;
+        left: 0.3rem;
+        font-family: 'Quicksand', sans-serif;
+    }
+    .imagen-borde-abajo{
+        position: relative;
+        left: 24rem;
+    }
+    .contenedor-foto-estatica{
+        position: relative;
+        left: 23rem;
+    }
+}
+
+
+
+
+
+@media screen and (min-width:1800px) and (max-width:1900px){
+    .cont-palabras1{
+        font-size: 2rem;
+        position: relative;
+        left: -100px;
+    }
+    .cont-palabras2{
+        font-size: 2rem;
+        position: relative;
+        left: -145px;
+    }
+    .cont-palabras3{
+        font-size: 1.6rem;
+        position: relative;
+        top: -5.625rem;
+        left: 1rem;
+        font-family: 'Quicksand', sans-serif;
+    }
+    .imagen-borde-abajo{
+        position: relative;
+        left: 26rem;
+    }
+    
+    
+}
+
+
+@media screen and (min-width:1900px){
+    .cont-palabras1{
+        font-size: 2rem;
+        position: relative;
+        left: -100px;
+    }
+    .cont-palabras2{
+        font-size: 2rem;
+        position: relative;
+        left: -145px;
+    }
+    .cont-palabras3{
+        font-size: 1.6rem;
+        position: relative;
+        top: -5.625rem;
+        left: 2.8rem;
+        font-family: 'Quicksand', sans-serif;
+    }
+    .imagen-borde-abajo{
+        position: relative;
+        left: 450px;
+    }
+}
+
